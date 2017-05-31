@@ -1,0 +1,47 @@
+.main-navigation {
+  @extend %styled-font;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height $animation-time ease;
+  text-align: center;
+
+  &--open {
+    max-height: rem(500px);
+  }
+
+  @include breakpoint(small-handset-landscape) {
+    max-height: none;
+    text-align: right;
+  };
+
+
+  &__item {
+    display: block;
+    line-height: rem(30px);
+    padding: 0.4em;
+    @include breakpoint(small-handset-landscape) {
+      display: inline;
+      padding:0;
+      margin-left:1em;
+      font-size: 1.3em;
+    };
+  }
+}
+
+.hamburger {
+  padding:rem(5px);
+
+@include breakpoint(small-handset-landscape) {
+  display: none;
+}
+
+  .hamburger-inner {
+    background: $link-color;
+    height:rem(3px);
+    &:after,
+    &:before {
+      background: $link-color;
+      height:rem(3px);
+    }
+  }
+}
