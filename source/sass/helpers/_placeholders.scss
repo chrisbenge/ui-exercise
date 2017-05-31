@@ -1,0 +1,41 @@
+/*
+	Clearfix
+*/
+%clearfix {
+  &:after,
+  &:before {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+%underline-style {
+  backface-visibility: hidden;
+  position: relative;
+  transition: color $animation-time;
+
+  &:after {
+    height: 2px;
+    width: 0;
+    background: $link-color;
+    left: 50%;
+    transform: translateX(-50%);
+    backface-visibility: hidden;
+    position: absolute;
+    content: "";
+    transition: width $animation-time ease;
+    bottom: -1px;
+  }
+
+  &:hover {
+    &:after {
+      width: 100%;
+    }
+  }
+}

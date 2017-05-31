@@ -1,0 +1,8 @@
+.main-header {
+  padding: 0.5em;
+  border-bottom:rem(1px) solid #ccc;
+
+  @include breakpoint(small-handset-landscape) {
+    padding: 1em 2em;
+  }
+}

@@ -1,0 +1,76 @@
+.responsive-debug {
+	position:fixed;
+	left:0;
+	bottom:0;
+	color:white;
+	background:#666;
+	padding:5px;
+	z-index: 999;
+	&:after {
+		content: ' small';
+
+		@include breakpoint(medium-handset) {
+			content: ' medium-handset';
+		}
+
+		@include breakpoint(large-handset) {
+			content: ' large-handset';
+		}
+
+		@include breakpoint(small-handset-landscape) {
+			content: ' small-handset-landscape';
+		}
+
+		@include breakpoint(medium-handset-landscape) {
+			content: ' medium-handset-landscape';
+		}
+
+		@include breakpoint(large-handset-landscape) {
+			content: ' large-handset-landscape';
+		}
+
+		@include breakpoint(large-tablet) {
+			content: ' large-tablet';
+		}
+
+		@include breakpoint(small-tablet-landscape) {
+			content: ' small-tablet-landscape';
+		}
+
+		@include breakpoint(large-tablet-landscape ) {
+			content: '  large-tablet-landscape ';
+		}
+
+		@include breakpoint(large-desktop) {
+			content: ' large-desktop';
+		}
+
+
+
+	}
+}
+
+
+.tv-debug {
+	position:fixed;
+	right:0;
+	bottom:0;
+	color:white;
+	background:red;
+	padding:5px;
+	z-index: 999;
+	&:after {
+		content: ' small';
+
+		@include hpbreakpoint(hp1400) {
+			content: 'hp1400';
+		}
+		
+		@include hpbreakpoint(hp1540) {
+			content: 'hp1540';
+		}
+
+
+
+	}
+}
