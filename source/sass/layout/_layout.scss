@@ -19,9 +19,13 @@
     transition: transform $animation-time;
     @include breakpoint(large-handset-landscape) {
       flex-basis: 30%;
+      transform: translateX(100%);
       padding:3em;
       text-align: center;
     };
 
+    &--open {
+      transform: translateX(0);
+    }
   }
 }

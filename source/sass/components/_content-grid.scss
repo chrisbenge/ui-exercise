@@ -3,7 +3,8 @@
   flex-flow: row wrap;
   padding: 1em 0;
   &__item {
-    transition: flexBasis $animation-time;
+    @extend .animated;
+    animation-name: fadeInUp;
     padding:0 0.8em;
     width: 100%;
     margin-bottom: 1.5em;
